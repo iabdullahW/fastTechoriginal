@@ -8,6 +8,7 @@ const StatsCounter = () => {
   const ref = useRef(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -19,12 +20,11 @@ const StatsCounter = () => {
       { threshold: 0.5 } // Trigger when 50% of the component is visible
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      const currentRef = ref.current;
       if (currentRef) {
         observer.unobserve(currentRef);
       }

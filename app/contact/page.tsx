@@ -12,7 +12,7 @@ import flag from "./images/Flag_of_Pakistan.svg"
 import Image from 'next/image';
 
 const Page = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,7 +21,9 @@ const Page = () => {
       .then(
         () => {
           alert('Email has been sent successfully!');
-          form.current.reset(); // Clear the input fields
+          if (form.current) {
+            form.current.reset(); // Clear the input fields
+          }
         },
         (error) => {
           alert('Failed to send email...' + error.text);
