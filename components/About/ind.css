@@ -1,0 +1,26 @@
+.about-section {
+    position: relative;
+    color: #fff;
+  }
+  
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#2B0054 ; /* Primary color */
+    /* Change the transform origin */
+    z-index: -1;
+  }
+  
+  .about-section .contain{
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    #about {
+      margin-top: 50px;
+    }
+  }

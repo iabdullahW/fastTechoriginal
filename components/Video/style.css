@@ -1,0 +1,27 @@
+.video-section {
+    position: relative;
+    color: #fff;
+  }
+  
+  .video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2b0054; /* Primary color */
+    transform: skewY(7deg); /* Adjust the angle */
+    transform-origin: top left; /* Change the transform origin */
+    z-index: -1;
+  }
+  
+  .video-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    #about {
+      margin-top: 50px;
+    }
+  }
