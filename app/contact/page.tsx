@@ -11,7 +11,7 @@ import { FaLinkedin } from "react-icons/fa";
 import flag from "./images/Flag_of_Pakistan.svg"
 import Image from 'next/image';
 
-const page = () => {
+const Page = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -124,4 +124,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
